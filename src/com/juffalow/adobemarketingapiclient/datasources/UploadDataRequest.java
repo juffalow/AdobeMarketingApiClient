@@ -7,21 +7,21 @@ import com.google.gson.Gson;
  *
  * @author Matej 'juffalow' Jellus <juffalow@juffalow.com>
  */
-public class DataSourcesRequest implements Request {
-    
+public class UploadDataRequest implements Request {
+
     protected String[] columns;
-    
+
     protected int dataSourceID = 1;
-    
+
     protected boolean finished;
-    
+
     protected String jobName;
-    
+
     protected String reportSuiteID;
-    
+
     protected ArrayList<String[]> rows;
-    
-    public DataSourcesRequest(String[] columns, int dataSourceId, boolean finished, String jobName, String reportSuiteId, ArrayList<String[]> rows) {
+
+    public UploadDataRequest(String[] columns, int dataSourceId, boolean finished, String jobName, String reportSuiteId, ArrayList<String[]> rows) {
         this.columns = columns;
         this.dataSourceID = dataSourceId;
         this.finished = finished;
@@ -33,7 +33,7 @@ public class DataSourcesRequest implements Request {
     @Override
     public String toJSON() {
         Gson gson = new Gson();
-        
+
         return gson.toJson(this);
     }
 }

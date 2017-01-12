@@ -6,6 +6,12 @@ The only thing that is done is UploadData method from DataSources API. But it ca
 be used as artwork how the API is working and how you can communicate with it
 using java language.
 
+## Dependencies
+
+The project has one dependence : [google-gson](https://github.com/google/gson).
+
+It is used to return JSON string in [UploadDataRequest](/src/com/juffalow/adobemarketingapiclient/datasources/UploadDataRequest.java).
+
 ## Example
 
 ```
